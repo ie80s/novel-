@@ -1,0 +1,6 @@
+/* pages/locate/locate.wxss */
+.title{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+}
