@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="bookcase-box">
+    <view class="bookcase-item" bindtap="skip" data-bookid="{{index}}" wx:for="{{bookcase}}" wx:key="index">
+      <image class="cover" src="{{item.cover}}"></image>
+      <view class="book-content">
+        <text class="title">{{item.title}}<text class="book-new" wx:if="{{item.isUpdate}}">更新</text></text>
+        <text class="content"><text class="text-hint">{{item.updated}}</text>  {{item.lastChapter}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- <swiper class="swiper" indicator-dots="true" autoplay="true" interval="2000" duration="2000">  
+   <block wx:for="{{movies}}" wx:for-index="index">  
+    <swiper-item>  
+     <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
+    </swiper-item>  
+   </block>  
+  </swiper>  -->
+  <view class="book-add" bindtap="toSearch">
+    <image class="add-btn" src="../../static/image/add.png" background-size="cover"></image>
+    <text class="user-motto">添加您喜欢的小说</text>
+  </view>
+  <button bindtap="goTotalkpage">MAP</button>
+  <button bindtap="gointo">yun</button>
+  
+</view>
